@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Simple Todo List</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="container" id="app">
+<header>
+<div>
+<h1>Todo List</h1>
+<p class="lead">Keep track of tasks — persistent in your browser.</p>
+</div>
+<div style="margin-left:auto;text-align:right">
+<div class="small" id="stats">0 tasks</div>
+</div>
+</header>
+
+
+<form class="add" id="addForm" aria-label="Add todo">
+<label for="newTodo" class="visually-hidden">New task</label>
+<input id="newTodo" type="text" placeholder="Add a new task and press Add" autocomplete="off" />
+<button class="btn" id="addBtn">Add</button>
+</form>
+
+
+<div class="controls" role="toolbar" aria-label="Todo controls">
+<div>
+<button class="filter" data-filter="all">All</button>
+<button class="filter" data-filter="active">Active</button>
+<button class="filter" data-filter="completed">Completed</button>
+</div>
+<div style="margin-left:auto;display:flex;gap:8px">
+<button class="filter" id="clearCompleted">Clear completed</button>
+<button class="filter" id="clearAll">Clear all</button>
+</div>
+</div>
+
+
+<ul class="list" id="todoList" aria-live="polite"></ul>
+<div class="empty" id="empty">No tasks — add your first one.</div>
+</main>
+
+
+<script src="script.js"></script>
+</body>
+</html>
